@@ -126,7 +126,7 @@ public class AlphaController {
         return emp;
     }
 
-    
+
     @RequestMapping(path = "/emps", method = RequestMethod.GET)
     @ResponseBody
     public List<Map<String, Object>> getEmps() {
