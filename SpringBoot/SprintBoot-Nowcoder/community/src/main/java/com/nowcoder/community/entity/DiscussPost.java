@@ -14,7 +14,11 @@ public class DiscussPost {
 
     private int type;
 
-    private Date createDate;
+    private int status;
+
+
+
+    private Date createTime;
 
     private int commentCount;
 
@@ -60,13 +64,21 @@ public class DiscussPost {
         this.type = type;
     }
 
-    public Date getCreateDate() {
-        return createDate;
+    public int getStatus() {
+        return status;
     }
 
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
+    public void setStatus(int status) {
+        this.status = status;
     }
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
 
     public int getCommentCount() {
         return commentCount;
@@ -92,7 +104,7 @@ public class DiscussPost {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", type=" + type +
-                ", createDate=" + createDate +
+                ", createDate=" + createTime +
                 ", commentCount=" + commentCount +
                 ", score=" + score +
                 '}';
