@@ -3,8 +3,8 @@ package com.nowcoder.community.util;
 import com.nowcoder.community.entity.User;
 import org.springframework.stereotype.Component;
 
-/*
-* 持有有户信息，代替session对象
+/**
+ * 持有用户信息,用于代替session对象.
  */
 @Component
 public class HostHolder {
@@ -22,4 +22,5 @@ public class HostHolder {
     public void clear() {
         users.remove();
     }
+
 }

@@ -1,6 +1,5 @@
 package com.nowcoder.community.config;
 
-import com.nowcoder.community.annotation.LoginRequired;
 import com.nowcoder.community.controller.interceptor.AlphaInterceptor;
 import com.nowcoder.community.controller.interceptor.LoginRequiredInterceptor;
 import com.nowcoder.community.controller.interceptor.LoginTicketInterceptor;
@@ -33,4 +32,5 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginRequiredInterceptor)
                 .excludePathPatterns("/**/*.css", "/**/*.js", "/**/*.png", "/**/*.jpg", "/**/*.jpeg");
     }
+
 }

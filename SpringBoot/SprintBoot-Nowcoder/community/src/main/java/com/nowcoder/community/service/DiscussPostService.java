@@ -1,6 +1,5 @@
 package com.nowcoder.community.service;
 
-
 import com.nowcoder.community.dao.DiscussPostMapper;
 import com.nowcoder.community.entity.DiscussPost;
 import com.nowcoder.community.util.SensitiveFilter;
@@ -8,11 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
 
-import java.util.HashMap;
 import java.util.List;
 
 @Service
 public class DiscussPostService {
+
     @Autowired
     private DiscussPostMapper discussPostMapper;
 
@@ -24,12 +23,12 @@ public class DiscussPostService {
     }
 
     public int findDiscussPostRows(int userId) {
-        return discussPostMapper.selectDiscussPostRow(userId);
+        return discussPostMapper.selectDiscussPostRows(userId);
     }
 
     public int addDiscussPost(DiscussPost post) {
         if (post == null) {
-            throw new IllegalArgumentException("参数不能为空");
+            throw new IllegalArgumentException("参数不能为空!");
         }
 
         // 转义HTML标记
@@ -44,6 +43,10 @@ public class DiscussPostService {
 
     public DiscussPost findDiscussPostById(int id) {
         return discussPostMapper.selectDiscussPostById(id);
+    }
+
+    public int updateCommentCount(int id, int commentCount) {
+        return discussPostMapper.updateCommentCount(id, commentCount);
     }
 
 }

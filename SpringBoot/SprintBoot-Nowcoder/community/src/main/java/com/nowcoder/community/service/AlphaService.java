@@ -111,7 +111,7 @@ public class AlphaService {
                discussPostMapper.insertDiscussPost(post);
 
                Integer.valueOf("abc");
-               
+
                return null;
            }
        });
