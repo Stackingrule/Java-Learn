@@ -46,7 +46,7 @@ public class LoginTicket {
         return expired;
     }
 
-    public void setExpired(Date expire) {
+    public void setExpired(Date expired) {
         this.expired = expired;
     }
 
