@@ -32,7 +32,6 @@ public class MessageController {
     // 私信列表
     @RequestMapping(path = "/letter/list", method = RequestMethod.GET)
     public String getLetterList(Model model, Page page) {
-
         User user = hostHolder.getUser();
         // 分页信息
         page.setLimit(5);
@@ -93,7 +92,6 @@ public class MessageController {
             messageService.readMessage(ids);
         }
 
-
         return "/site/letter-detail";
     }
 
@@ -119,23 +117,24 @@ public class MessageController {
                 }
             }
         }
+
         return ids;
     }
 
     @RequestMapping(path = "/letter/send", method = RequestMethod.POST)
     @ResponseBody
-    private String sendLetter(String toName, String content) {
+    public String sendLetter(String toName, String content) {
         User target = userService.findUserByName(toName);
         if (target == null) {
-            return CommunityUtil.getJSONString(1, "目标用户不存在！");
+            return CommunityUtil.getJSONString(1, "目标用户不存在!");
         }
+
         Message message = new Message();
         message.setFromId(hostHolder.getUser().getId());
         message.setToId(target.getId());
         if (message.getFromId() < message.getToId()) {
             message.setConversationId(message.getFromId() + "_" + message.getToId());
-        }
-        else {
+        } else {
             message.setConversationId(message.getToId() + "_" + message.getFromId());
         }
         message.setContent(content);

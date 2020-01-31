@@ -1,7 +1,7 @@
 package com.nowcoder.community.controller;
 
-import com.nowcoder.community.util.CommunityUtil;
 import com.nowcoder.community.service.AlphaService;
+import com.nowcoder.community.util.CommunityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,9 +16,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.*;
 
-/*
-* Created by Stackingrule on 2019/12/30
- */
 @Controller
 @RequestMapping("/alpha")
 public class AlphaController {

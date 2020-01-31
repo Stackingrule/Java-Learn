@@ -22,8 +22,7 @@ public class CommentController {
     private HostHolder hostHolder;
 
     @RequestMapping(path = "/add/{discussPostId}", method = RequestMethod.POST)
-    public String addPost(@PathVariable("discussPostId") int discussPostId, Comment comment) {
-
+    public String addComment(@PathVariable("discussPostId") int discussPostId, Comment comment) {
         comment.setUserId(hostHolder.getUser().getId());
         comment.setStatus(0);
         comment.setCreateTime(new Date());
@@ -31,4 +30,5 @@ public class CommentController {
 
         return "redirect:/discuss/detail/" + discussPostId;
     }
+
 }

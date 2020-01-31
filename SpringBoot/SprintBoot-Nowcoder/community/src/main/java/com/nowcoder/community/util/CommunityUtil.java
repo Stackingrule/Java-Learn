@@ -12,9 +12,8 @@ public class CommunityUtil {
 
     // 生成随机字符串
     public static String generateUUID() {
-        return UUID.randomUUID().toString().replace("-", "");
+        return UUID.randomUUID().toString().replaceAll("-", "");
     }
-
 
     // MD5加密
     // hello -> abc123def456
@@ -26,10 +25,7 @@ public class CommunityUtil {
         return DigestUtils.md5DigestAsHex(key.getBytes());
     }
 
-
-    //
     public static String getJSONString(int code, String msg, Map<String, Object> map) {
-
         JSONObject json = new JSONObject();
         json.put("code", code);
         json.put("msg", msg);
@@ -41,8 +37,8 @@ public class CommunityUtil {
         return json.toJSONString();
     }
 
-    public static String getJSONString(int code, String map) {
-        return getJSONString(code, null, null);
+    public static String getJSONString(int code, String msg) {
+        return getJSONString(code, msg, null);
     }
 
     public static String getJSONString(int code) {
@@ -50,10 +46,10 @@ public class CommunityUtil {
     }
 
     public static void main(String[] args) {
-
         Map<String, Object> map = new HashMap<>();
-        map.put("name", "张三");
+        map.put("name", "zhangsan");
         map.put("age", 25);
         System.out.println(getJSONString(0, "ok", map));
     }
+
 }

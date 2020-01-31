@@ -21,5 +21,4 @@ public interface DiscussPostMapper {
 
     int updateCommentCount(int id, int commentCount);
 
-
 }

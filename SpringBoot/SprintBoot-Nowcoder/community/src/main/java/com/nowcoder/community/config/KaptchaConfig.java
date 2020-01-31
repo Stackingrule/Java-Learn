@@ -11,7 +11,6 @@ import java.util.Properties;
 @Configuration
 public class KaptchaConfig {
 
-
     @Bean
     public Producer kaptchaProducer() {
         Properties properties = new Properties();
@@ -28,6 +27,5 @@ public class KaptchaConfig {
         kaptcha.setConfig(config);
         return kaptcha;
     }
-
 
 }

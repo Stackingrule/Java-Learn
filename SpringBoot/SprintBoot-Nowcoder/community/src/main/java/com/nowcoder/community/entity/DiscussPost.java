@@ -5,23 +5,13 @@ import java.util.Date;
 public class DiscussPost {
 
     private int id;
-
     private int userId;
-
     private String title;
-
     private String content;
-
     private int type;
-
     private int status;
-
-
-
     private Date createTime;
-
     private int commentCount;
-
     private double score;
 
     public int getId() {
@@ -71,6 +61,7 @@ public class DiscussPost {
     public void setStatus(int status) {
         this.status = status;
     }
+
     public Date getCreateTime() {
         return createTime;
     }
@@ -78,7 +69,6 @@ public class DiscussPost {
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
     }
-
 
     public int getCommentCount() {
         return commentCount;
@@ -104,7 +94,8 @@ public class DiscussPost {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", type=" + type +
-                ", createDate=" + createTime +
+                ", status=" + status +
+                ", createTime=" + createTime +
                 ", commentCount=" + commentCount +
                 ", score=" + score +
                 '}';

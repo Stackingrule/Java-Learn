@@ -30,30 +30,31 @@ public class SensitiveFilter {
         try (
                 InputStream is = this.getClass().getClassLoader().getResourceAsStream("sensitive-words.txt");
                 BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-                ) {
+        ) {
             String keyword;
             while ((keyword = reader.readLine()) != null) {
                 // 添加到前缀树
-                this.addkeyword(keyword);
+                this.addKeyword(keyword);
             }
         } catch (IOException e) {
-            logger.error("加载敏感词失败: " + e.getMessage());
+            logger.error("加载敏感词文件失败: " + e.getMessage());
         }
     }
 
-    // 将敏感词添加到前缀树
-    private void addkeyword(String keyword) {
+    // 将一个敏感词添加到前缀树中
+    private void addKeyword(String keyword) {
         TrieNode tempNode = rootNode;
         for (int i = 0; i < keyword.length(); i++) {
             char c = keyword.charAt(i);
             TrieNode subNode = tempNode.getSubNode(c);
+
             if (subNode == null) {
-                // 初始化字节点
+                // 初始化子节点
                 subNode = new TrieNode();
                 tempNode.addSubNode(c, subNode);
             }
 
-            // 指向子节点
+            // 指向子节点,进入下一轮循环
             tempNode = subNode;
 
             // 设置结束标识
@@ -63,10 +64,11 @@ public class SensitiveFilter {
         }
     }
 
-    /*
-    * 过滤器敏感词
-    * @Param text
-    * @return 过滤后的文本
+    /**
+     * 过滤敏感词
+     *
+     * @param text 待过滤的文本
+     * @return 过滤后的文本
      */
     public String filter(String text) {
         if (StringUtils.isBlank(text)) {
@@ -124,8 +126,10 @@ public class SensitiveFilter {
 
         return sb.toString();
     }
+
     // 判断是否为符号
     private boolean isSymbol(Character c) {
+        // 0x2E80~0x9FFF 是东亚文字范围
         return !CharUtils.isAsciiAlphanumeric(c) && (c < 0x2E80 || c > 0x9FFF);
     }
 
@@ -135,9 +139,8 @@ public class SensitiveFilter {
         // 关键词结束标识
         private boolean isKeywordEnd = false;
 
-        // 子节点
+        // 子节点(key是下级字符,value是下级节点)
         private Map<Character, TrieNode> subNodes = new HashMap<>();
-
 
         public boolean isKeywordEnd() {
             return isKeywordEnd;
@@ -156,7 +159,7 @@ public class SensitiveFilter {
         public TrieNode getSubNode(Character c) {
             return subNodes.get(c);
         }
-    }
 
+    }
 
 }

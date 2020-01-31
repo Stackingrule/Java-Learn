@@ -95,7 +95,6 @@ public class User {
         this.createTime = createTime;
     }
 
-
     @Override
     public String toString() {
         return "User{" +
@@ -111,4 +110,5 @@ public class User {
                 ", createTime=" + createTime +
                 '}';
     }
+
 }
