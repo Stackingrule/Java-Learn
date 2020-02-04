@@ -7,7 +7,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Date;
 
-@Document(indexName = "discusspost", type = "doc", shards = 6, replicas = 3)
+@Document(indexName = "discusspost", type = "_doc", shards = 6, replicas = 3)
 public class DiscussPost {
 
     @Id
@@ -16,6 +16,7 @@ public class DiscussPost {
     @Field(type = FieldType.Integer)
     private int userId;
 
+    // 互联网校招
     @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_smart")
     private String title;
 
