@@ -40,11 +40,11 @@ public class LoginController implements CommunityConstant {
     @Autowired
     private Producer kaptchaProducer;
 
-    @Autowired
-    private RedisTemplate redisTemplate;
-
     @Value("${server.servlet.context-path}")
     private String contextPath;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping(path = "/register", method = RequestMethod.GET)
     public String getRegisterPage() {
@@ -89,15 +89,15 @@ public class LoginController implements CommunityConstant {
     }
 
     @RequestMapping(path = "/kaptcha", method = RequestMethod.GET)
-    public void getKaptcha(HttpServletResponse response /*, HttpSession session */) {
+    public void getKaptcha(HttpServletResponse response/*, HttpSession session*/) {
         // 生成验证码
         String text = kaptchaProducer.createText();
         BufferedImage image = kaptchaProducer.createImage(text);
 
         // 将验证码存入session
-        //session.setAttribute("kaptcha", text);
+        // session.setAttribute("kaptcha", text);
 
-        // 验证码归属者
+        // 验证码的归属
         String kaptchaOwner = CommunityUtil.generateUUID();
         Cookie cookie = new Cookie("kaptchaOwner", kaptchaOwner);
         cookie.setMaxAge(60);
@@ -106,7 +106,6 @@ public class LoginController implements CommunityConstant {
         // 将验证码存入Redis
         String redisKey = RedisKeyUtil.getKaptchaKey(kaptchaOwner);
         redisTemplate.opsForValue().set(redisKey, text, 60, TimeUnit.SECONDS);
-
 
         // 将突图片输出给浏览器
         response.setContentType("image/png");
@@ -120,8 +119,7 @@ public class LoginController implements CommunityConstant {
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
     public String login(String username, String password, String code, boolean rememberme,
-                        Model model, /*HttpSession session,*/
-                        HttpServletResponse response,
+                        Model model, /*HttpSession session, */HttpServletResponse response,
                         @CookieValue("kaptchaOwner") String kaptchaOwner) {
         // 检查验证码
         // String kaptcha = (String) session.getAttribute("kaptcha");

@@ -29,9 +29,6 @@ public class UserService implements CommunityConstant {
     private UserMapper userMapper;
 
     @Autowired
-    private RedisTemplate redisTemplate;
-
-    @Autowired
     private MailClient mailClient;
 
     @Autowired
@@ -46,6 +43,8 @@ public class UserService implements CommunityConstant {
 //    @Autowired
 //    private LoginTicketMapper loginTicketMapper;
 
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     public User findUserById(int id) {
 //        return userMapper.selectById(id);
@@ -182,13 +181,13 @@ public class UserService implements CommunityConstant {
     }
 
     public LoginTicket findLoginTicket(String ticket) {
- //       return loginTicketMapper.selectByTicket(ticket);
+//        return loginTicketMapper.selectByTicket(ticket);
         String redisKey = RedisKeyUtil.getTicketKey(ticket);
         return (LoginTicket) redisTemplate.opsForValue().get(redisKey);
     }
 
     public int updateHeader(int userId, String headerUrl) {
- //       return userMapper.updateHeader(userId, headerUrl);
+//        return userMapper.updateHeader(userId, headerUrl);
         int rows = userMapper.updateHeader(userId, headerUrl);
         clearCache(userId);
         return rows;
@@ -198,19 +197,20 @@ public class UserService implements CommunityConstant {
         return userMapper.selectByName(username);
     }
 
-    // 1.优先从缓存取值
+    // 1.优先从缓存中取值
     private User getCache(int userId) {
         String redisKey = RedisKeyUtil.getUserKey(userId);
         return (User) redisTemplate.opsForValue().get(redisKey);
     }
+
     // 2.取不到时初始化缓存数据
     private User initCache(int userId) {
         User user = userMapper.selectById(userId);
         String redisKey = RedisKeyUtil.getUserKey(userId);
         redisTemplate.opsForValue().set(redisKey, user, 3600, TimeUnit.SECONDS);
-
         return user;
     }
+
     // 3.数据变更时清除缓存数据
     private void clearCache(int userId) {
         String redisKey = RedisKeyUtil.getUserKey(userId);

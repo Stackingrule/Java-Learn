@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @Component
 public class MessageInterceptor implements HandlerInterceptor {
+
     @Autowired
     private HostHolder hostHolder;
 
@@ -26,7 +27,6 @@ public class MessageInterceptor implements HandlerInterceptor {
             int letterUnreadCount = messageService.findLetterUnreadCount(user.getId(), null);
             int noticeUnreadCount = messageService.findNoticeUnreadCount(user.getId(), null);
             modelAndView.addObject("allUnreadCount", letterUnreadCount + noticeUnreadCount);
-
         }
     }
 }

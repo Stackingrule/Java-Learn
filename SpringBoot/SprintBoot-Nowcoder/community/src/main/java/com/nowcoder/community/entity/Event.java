@@ -1,6 +1,5 @@
 package com.nowcoder.community.entity;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -66,4 +65,5 @@ public class Event {
         this.data.put(key, value);
         return this;
     }
+
 }
