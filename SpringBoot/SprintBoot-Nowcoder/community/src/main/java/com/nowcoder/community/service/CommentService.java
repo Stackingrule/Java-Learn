@@ -5,6 +5,7 @@ import com.nowcoder.community.entity.Comment;
 import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.SensitiveFilter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
@@ -14,6 +15,7 @@ import org.springframework.web.util.HtmlUtils;
 import java.util.List;
 
 @Service
+@Repository
 public class CommentService implements CommunityConstant {
 
     @Autowired

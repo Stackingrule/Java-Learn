@@ -4,14 +4,12 @@ import com.nowcoder.community.dao.DiscussPostMapper;
 import com.nowcoder.community.entity.DiscussPost;
 import com.nowcoder.community.util.SensitiveFilter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;
 
 import java.util.List;
 
 @Service
-@Repository
 public class DiscussPostService {
 
     @Autowired
@@ -58,4 +56,5 @@ public class DiscussPostService {
     public int updateStatus(int id, int status) {
         return discussPostMapper.updateStatus(id, status);
     }
+
 }

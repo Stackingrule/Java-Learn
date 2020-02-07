@@ -153,7 +153,6 @@ public class DiscussPostController implements CommunityConstant {
         return "/site/discuss-detail";
     }
 
-
     // 置顶
     @RequestMapping(path = "/top", method = RequestMethod.POST)
     @ResponseBody
@@ -204,4 +203,5 @@ public class DiscussPostController implements CommunityConstant {
 
         return CommunityUtil.getJSONString(0);
     }
+
 }

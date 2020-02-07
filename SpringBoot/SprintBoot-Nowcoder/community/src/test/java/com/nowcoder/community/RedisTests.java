@@ -128,7 +128,9 @@ public class RedisTests {
 
         long size = redisTemplate.opsForHyperLogLog().size(unionKey);
 
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         System.out.println(size);
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 
     }
 
@@ -153,7 +155,9 @@ public class RedisTests {
                 return redisConnection.bitCount(redisKey.getBytes());
             }
         });
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         System.out.println(obj);
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     }
 
     // 统计3组数据的布尔值, 并对这3组数据做OR运算.
@@ -184,6 +188,7 @@ public class RedisTests {
             }
         });
 
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
         System.out.println(obj);
 
         System.out.println(redisTemplate.opsForValue().getBit(redisKey, 0));
@@ -193,6 +198,8 @@ public class RedisTests {
         System.out.println(redisTemplate.opsForValue().getBit(redisKey, 4));
         System.out.println(redisTemplate.opsForValue().getBit(redisKey, 5));
         System.out.println(redisTemplate.opsForValue().getBit(redisKey, 6));
+
+        System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     }
 
 
