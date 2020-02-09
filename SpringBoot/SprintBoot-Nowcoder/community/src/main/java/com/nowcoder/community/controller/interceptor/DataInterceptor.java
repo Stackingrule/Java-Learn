@@ -1,6 +1,5 @@
 package com.nowcoder.community.controller.interceptor;
 
-
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.DataService;
 import com.nowcoder.community.util.HostHolder;
@@ -22,15 +21,16 @@ public class DataInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        // 统计uv
+        // 统计UV
         String ip = request.getRemoteHost();
         dataService.recordUV(ip);
 
-        // 统计dau
+        // 统计DAU
         User user = hostHolder.getUser();
         if (user != null) {
             dataService.recordDAU(user.getId());
         }
-        return false;
+
+        return true;
     }
 }
