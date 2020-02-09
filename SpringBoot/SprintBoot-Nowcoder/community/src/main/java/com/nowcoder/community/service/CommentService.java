@@ -15,7 +15,6 @@ import org.springframework.web.util.HtmlUtils;
 import java.util.List;
 
 @Service
-@Repository
 public class CommentService implements CommunityConstant {
 
     @Autowired

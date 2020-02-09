@@ -57,4 +57,7 @@ public class DiscussPostService {
         return discussPostMapper.updateStatus(id, status);
     }
 
+    public int updateScore(int id, double score) {
+        return discussPostMapper.updateScore(id, score);
+    }
 }
