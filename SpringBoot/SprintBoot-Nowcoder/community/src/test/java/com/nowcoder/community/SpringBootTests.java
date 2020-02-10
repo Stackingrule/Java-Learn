@@ -68,6 +68,7 @@ public class SpringBootTests {
 
     @Test
     public void testFindById() {
+
         DiscussPost post = discussPostService.findDiscussPostById(date.getId());
 
         Assert.assertNotNull(post);
@@ -79,6 +80,7 @@ public class SpringBootTests {
 
     @Test
     public void testUpdateScore() {
+
         int rows =discussPostService.updateScore(date.getId(), 2000.00);
         Assert.assertEquals(1, rows);
 
