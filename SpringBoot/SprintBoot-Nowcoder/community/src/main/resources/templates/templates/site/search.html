@@ -6,8 +6,7 @@
 	<link rel="icon" href="https://static.nowcoder.com/images/logo_87_87.png"/>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 	<link rel="stylesheet" th:href="@{/css/global.css}" />
-	<link rel="stylesheet" th:href="@{/css/login.css}" />
-	<title>牛客网-账号设置</title>
+	<title>牛客网-搜索结果</title>
 </head>
 <body>
 	<div class="nk-container">
@@ -61,94 +60,45 @@
 
 		<!-- 内容 -->
 		<div class="main">
-			<div class="container p-5 mt-3 mb-3">
-				<!-- 上传头像 -->
-				<h6 class="text-left text-info border-bottom pb-2">上传头像</h6>
-				<!--上传到本地-->
-				<!--
-				<form class="mt-5" method="post" enctype="multipart/form-data" th:action="@{/user/upload}">
-					<div class="form-group row mt-4">
-						<label for="head-image" class="col-sm-2 col-form-label text-right">选择头像:</label>
-						<div class="col-sm-10">
-							<div class="custom-file">
-								<input type="file" th:class="|custom-file-input ${error!=null?'is-invalid':''}|"
-									   id="head-image" name="headerImage" lang="es" required="">
-								<label class="custom-file-label" for="head-image" data-browse="文件">选择一张图片</label>
-								<div class="invalid-feedback" th:text="${error}">
-									该账号不存在!
-								</div>
+			<div class="container">
+				<h6><b class="square"></b> 相关帖子</h6>
+				<!-- 帖子列表 -->
+				<ul class="list-unstyled mt-4">
+					<li class="media pb-3 pt-3 mb-3 border-bottom" th:each="map:${discussPosts}">
+						<img th:src="${map.user.headerUrl}" class="mr-4 rounded-circle" alt="用户头像" style="width:50px;height:50px;">
+						<div class="media-body">
+							<h6 class="mt-0 mb-3">
+								<a th:href="@{|/discuss/detail/${map.post.id}|}" th:utext="${map.post.title}">备战<em>春招</em>，面试刷题跟他复习，一个月全搞定！</a>
+							</h6>
+							<div class="mb-3" th:utext="${map.post.content}">
+								金三银四的金三已经到了，你还沉浸在过年的喜悦中吗？ 如果是，那我要让你清醒一下了：目前大部分公司已经开启了内推，正式网申也将在3月份陆续开始，金三银四，<em>春招</em>的求职黄金时期已经来啦！！！ 再不准备，作为19应届生的你可能就找不到工作了。。。作为20届实习生的你可能就找不到实习了。。。 现阶段时间紧，任务重，能做到短时间内快速提升的也就只有算法了， 那么算法要怎么复习？重点在哪里？常见笔试面试算法题型和解题思路以及最优代码是怎样的？ 跟左程云老师学算法，不仅能解决以上所有问题，还能在短时间内得到最大程度的提升！！！
+							</div>
+							<div class="text-muted font-size-12">
+								<u class="mr-3" th:utext="${map.user.username}">寒江雪</u>
+								发布于 <b th:text="${#dates.format(map.post.createTime,'yyyy-MM-dd HH:mm:ss')}">2019-04-15 15:32:18</b>
+								<ul class="d-inline float-right">
+									<li class="d-inline ml-2">赞 <i th:text="${map.likeCount}">11</i></li>
+									<li class="d-inline ml-2">|</li>
+									<li class="d-inline ml-2">回复 <i th:text="${map.post.commentCount}">7</i></li>
+								</ul>
 							</div>
 						</div>
-					</div>
-					<div class="form-group row mt-4">
-						<div class="col-sm-2"></div>
-						<div class="col-sm-10 text-center">
-							<button type="submit" class="btn btn-info text-white form-control">立即上传</button>
-						</div>
-					</div>
-				</form>
-				-->
-				<!--上传到七牛云-->
-				<form class="mt-5" id="uploadForm">
-					<div class="form-group row mt-4">
-						<label for="head-image" class="col-sm-2 col-form-label text-right">选择头像:</label>
-						<div class="col-sm-10">
-							<div class="custom-file">
-								<input type="hidden" name="token" th:value="${uploadToken}">
-								<input type="hidden" name="key" th:value="${fileName}">
-								<input type="file" class="custom-file-input" id="head-image" name="file" lang="es" required="">
-								<label class="custom-file-label" for="head-image" data-browse="文件">选择一张图片</label>
-								<div class="invalid-feedback">
-									该账号不存在!
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="form-group row mt-4">
-						<div class="col-sm-2"></div>
-						<div class="col-sm-10 text-center">
-							<button type="submit" class="btn btn-info text-white form-control">立即上传</button>
-						</div>
-					</div>
-				</form>
-
-				<!-- 修改密码 -->
-				<h6 class="text-left text-info border-bottom pb-2 mt-5">修改密码</h6>
-				<form class="mt-5">				
-					<div class="form-group row mt-4">
-						<label for="old-password" class="col-sm-2 col-form-label text-right">原密码:</label>
-						<div class="col-sm-10">
-							<input type="password" class="form-control" id="old-password" placeholder="请输入原始密码!" required>
-							<div class="invalid-feedback">
-								密码长度不能小于8位!
-							</div>							
-						</div>
-					</div>
-					<div class="form-group row mt-4">
-						<label for="new-password" class="col-sm-2 col-form-label text-right">新密码:</label>
-						<div class="col-sm-10">
-							<input type="password" class="form-control" id="new-password" placeholder="请输入新的密码!" required>
-							<div class="invalid-feedback">
-								密码长度不能小于8位!
-							</div>							
-						</div>
-					</div>
-					<div class="form-group row mt-4">
-						<label for="confirm-password" class="col-sm-2 col-form-label text-right">确认密码:</label>
-						<div class="col-sm-10">
-							<input type="password" class="form-control" id="confirm-password" placeholder="再次输入新密码!" required>
-							<div class="invalid-feedback">
-								两次输入的密码不一致!
-							</div>								
-						</div>
-					</div>				
-					<div class="form-group row mt-4">
-						<div class="col-sm-2"></div>
-						<div class="col-sm-10 text-center">
-							<button type="submit" class="btn btn-info text-white form-control">立即保存</button>
-						</div>
-					</div>
-				</form>				
+					</li>
+				</ul>
+				<!-- 分页 -->
+				<nav class="mt-5" th:replace="index::pagination">
+					<ul class="pagination justify-content-center">
+						<li class="page-item"><a class="page-link" href="#">首页</a></li>
+						<li class="page-item disabled"><a class="page-link" href="#">上一页</a></li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#">下一页</a></li>
+						<li class="page-item"><a class="page-link" href="#">末页</a></li>
+					</ul>
+				</nav>
 			</div>
 		</div>
 
@@ -218,13 +168,6 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js" crossorigin="anonymous"></script>
 	<script th:src="@{/js/global.js}"></script>
-	<script th:src="@{/js/setting.js}"></script>
-	<script>
-		$(function(){
-			bsCustomFileInput.init();
-		});
-	</script>
 </body>
 </html>
