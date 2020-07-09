@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c5545344-a526-4c80-a855-4baaff2dcdd6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Stackingrule &lt;messageswitching@gmail.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1Y7QLzb2PxZIiMxhnM2R8wS4EAP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Application.BlockedWaitingTimedWaiting">
+    <configuration name="BlockedWaitingTimedWaiting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threadcoreknowledge.sixstates.BlockedWaitingTimedWaiting" />
+      <module name="java_concurrency_core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="threadcoreknowledge.sixstates.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NewRunnableTerminated" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threadcoreknowledge.sixstates.NewRunnableTerminated" />
+      <module name="java_concurrency_core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="threadcoreknowledge.sixstates.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WrongWayVolatile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threadcoreknowledge.stopthread.volatiledemo.WrongWayVolatile" />
+      <module name="java_concurrency_core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="threadcoreknowledge.stopthread.volatiledemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WrongWayVolatileCantStop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threadcoreknowledge.stopthread.volatiledemo.WrongWayVolatileCantStop" />
+      <module name="java_concurrency_core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="threadcoreknowledge.stopthread.volatiledemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WrongWayVolatileFixed" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="threadcoreknowledge.stopthread.volatiledemo.WrongWayVolatileFixed" />
+      <module name="java_concurrency_core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="threadcoreknowledge.stopthread.volatiledemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.BlockedWaitingTimedWaiting" />
+        <item itemvalue="Application.NewRunnableTerminated" />
+        <item itemvalue="Application.WrongWayVolatileFixed" />
+        <item itemvalue="Application.WrongWayVolatileCantStop" />
+        <item itemvalue="Application.WrongWayVolatile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5545344-a526-4c80-a855-4baaff2dcdd6" name="Default Changelist" comment="" />
+      <created>1582291104397</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582291104397</updated>
+      <workItem from="1582291127484" duration="3303000" />
+      <workItem from="1582381394851" duration="4632000" />
+      <workItem from="1582463089415" duration="4018000" />
+      <workItem from="1582546234676" duration="4029000" />
+      <workItem from="1582634153845" duration="2104000" />
+      <workItem from="1582903527831" duration="1808000" />
+      <workItem from="1583229749369" duration="4209000" />
+    </task>
+    <task id="LOCAL-00001" summary="init java_concurrency_core">
+      <created>1582292567255</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582292567255</updated>
+    </task>
+    <task id="LOCAL-00002" summary="create thread">
+      <created>1582293802902</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582293802902</updated>
+    </task>
+    <task id="LOCAL-00003" summary="wrong ways">
+      <created>1582383137897</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582383137897</updated>
+    </task>
+    <task id="LOCAL-00004" summary="start thread">
+      <created>1582385677949</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1582385677949</updated>
+    </task>
+    <task id="LOCAL-00005" summary="right way stop yhread">
+      <created>1582466589498</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582466589498</updated>
+    </task>
+    <task id="LOCAL-00006" summary="right way stop thread">
+      <created>1582467609764</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582467609764</updated>
+    </task>
+    <task id="LOCAL-00007" summary="right way stop thread">
+      <created>1582549977303</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582549977303</updated>
+    </task>
+    <task id="LOCAL-00008" summary="StopThread">
+      <created>1582551334177</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582551334177</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <created>1582636792542</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582636792542</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update">
+      <created>1582904890167</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582904890167</updated>
+    </task>
+    <task id="LOCAL-00011" summary="线程的状态">
+      <created>1583237592841</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1583237592841</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init java_concurrency_core" />
+    <MESSAGE value="create thread" />
+    <MESSAGE value="wrong ways" />
+    <MESSAGE value="start thread" />
+    <MESSAGE value="right way stop yhread" />
+    <MESSAGE value="right way stop thread" />
+    <MESSAGE value="StopThread" />
+    <MESSAGE value="update" />
+    <MESSAGE value="线程的状态" />
+    <option name="LAST_COMMIT_MESSAGE" value="线程的状态" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="144" y="0" key="#Plugins" timestamp="1582381842878">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="144" y="0" key="#Plugins/0.0.1366.728@0.0.1366.728" timestamp="1582381842878" />
+    <state x="35" y="0" key="#Project_Structure" timestamp="1582550577721">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="35" y="0" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1582550577721" />
+    <state x="441" y="3" key="#com.intellij.ide.util.MemberChooser" timestamp="1583237111617">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="441" y="3" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1583237111617" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1583237587264">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583237587264" />
+    <state width="1313" height="165" key="GridCell.Tab.0.bottom" timestamp="1583237917308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="165" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583237917308" />
+    <state width="1313" height="165" key="GridCell.Tab.0.center" timestamp="1583237917308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="165" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583237917308" />
+    <state width="1313" height="165" key="GridCell.Tab.0.left" timestamp="1583237917308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="165" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583237917308" />
+    <state width="1313" height="165" key="GridCell.Tab.0.right" timestamp="1583237917308">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1313" height="165" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583237917308" />
+    <state x="35" y="0" key="SettingsEditor" timestamp="1582383033013">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="35" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582383033013" />
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2" timestamp="1583237600179">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="175" y="32" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1583237600179" />
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1582384846998">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="262" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1582384846998" />
+  </component>
+</project>
